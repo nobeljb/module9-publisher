@@ -18,3 +18,11 @@ Karena publisher dan subscriber memakai URL yang sama, itu berarti keduanya terh
 
 ## Screen of my running RabbitMQ
 ![img.png](img.png)
+
+## Sending and Processing Event
+
+Gambar di bawah menunjukkan ketika publisher mengirim 5 event ke message broker RabbitMQ, dan subscriber berhasil menerima serta memproses event tersebut.
+
+![img_1.png](img_1.png)
+
+Setiap event berisi informasi `user_id` dan `user_name`, dan diproses oleh subscriber dengan mencetak isi pesan tersebut ke terminal.
