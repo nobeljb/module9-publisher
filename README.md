@@ -15,3 +15,6 @@ URL tersebut menjelaskan alamat koneksi ke message broker (RabbitMQ). Rinciannya
 - 5672: adalah port default RabbitMQ untuk koneksi AMQP.
 
 Karena publisher dan subscriber memakai URL yang sama, itu berarti keduanya terhubung ke RabbitMQ yang sama, sehingga pesan yang dipublish akan bisa diterima oleh subscriber melalui queue yang sama (misalnya user_created).
+
+## Screen of my running RabbitMQ
+![img.png](img.png)
