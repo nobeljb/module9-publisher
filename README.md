@@ -26,3 +26,13 @@ Gambar di bawah menunjukkan ketika publisher mengirim 5 event ke message broker 
 ![img_1.png](img_1.png)
 
 Setiap event berisi informasi `user_id` dan `user_name`, dan diproses oleh subscriber dengan mencetak isi pesan tersebut ke terminal.
+
+## Monitoring Chart Based on Publisher
+
+Gambar berikut menunjukkan tampilan antarmuka RabbitMQ Management pada `localhost:15672`.
+
+![img_2.png](img_2.png)
+
+Spike (lonjakan) pada grafik `Message rates` muncul saat publisher dijalankan (`cargo run`). Setiap spike menandakan sejumlah event dikirim ke message broker. Dalam kasus ini, setiap kali publisher dijalankan, lima event dikirim sekaligus, sehingga terjadi peningkatan pada `Publish` dan `Deliver (manual ack)` pada grafik.
+
+Hal ini mengindikasikan bahwa sistem berjalan dengan baik, dan RabbitMQ berhasil mengatur alur pengiriman dan penerimaan pesan antara publisher dan subscriber.
